@@ -8,10 +8,10 @@ const jwt = require("jsonwebtoken");
 const jwtHelper = require("./helper/jwt");
 const allowedOrigins = ["http://localhost:4200"];
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "1234",
-  database: "achieversit",
+  host: "eyw6324oty5fsovx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  user: "gm1vm9miljet6rmv",
+  password: "kvg660giecd1gmvq",
+  database: "a7s7bdoaogdxt7kp",
 });
 
 var server = app.listen(4100, function () {
