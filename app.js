@@ -1,6 +1,7 @@
 // Bring in our dependencies
 const app = require('express')();
-const routes = require('./routes');
+const routes = require('./routes/index');
+const angularConceptsRoutes = require('./routes/angularConcepts');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const jwtHelper = require('./helper/jwt');
@@ -22,6 +23,7 @@ app.use(
 );
 app.use(jwtHelper());
 app.use('/', routes);
+app.use('/angularConcepts', angularConceptsRoutes);
 
 // Turn on that server!
 let server = app.listen(process.env.PORT || 4100, () => {
